@@ -13,6 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/me', function () {
+    return ['NIS' => '3103118112', 
+    'Nama'=> 'Rakha Asyraf', 
+    'Gender'=> 'Laki-laki',
+    'Phone'=> '085156088055',
+    'Class'=>'XII RPL 4'];
 });
+Route::get('auth', 'AuthController@me');
